@@ -1,0 +1,53 @@
+int a = 0;
+int b = 50;
+int d = 255;
+//background is black
+void setup() {
+  size(1000,500);
+  background(a);
+}  
+
+void draw (){
+// red box, when clicked the mouse color changes to red
+  strokeWeight(5); 
+  fill(d,a,a);
+  
+  rect(a,b,b,b);
+  
+  line(pmouseX,pmouseY,mouseX,mouseY);
+   if(mousePressed) if(mouseX>a) if(mouseX<b) if(mouseY>b) if(mouseY<b*2){
+      stroke(d,a,a); 
+   }
+   //green box, when clicked the mouse color changes to green 
+   fill(a,d,a);
+   rect(a,b*3,b,b);
+  if(mousePressed) if(mouseX>a) if(mouseX<b) if(mouseY>b*3) if(mouseY<b*4){
+      stroke(a,d,a); 
+   }
+   //blue box, when clicked the mouse color changes to blue
+  fill(a,a,d);
+  rect(a,b*4,b,b);
+  if(mousePressed) if(mouseX>a) if(mouseX<b) if(mouseY>b*4) if(mouseY<b*5){
+      stroke(a,a,d); 
+  }
+  //purple box, when clicked color changes to purple
+  fill(124, a, 173);
+  rect(a,b*2,b,b);
+  if(mousePressed) if(mouseX>a) if(mouseX<b) if(mouseY>b*2) if(mouseY<b*3){
+      stroke(124, a, 173); 
+  }
+  //black box in the right corner, when clicked on the color is black
+  fill(a);
+  rect(a,a,b,b);
+  if(mousePressed) if(mouseX>a) if(mouseX<b) if(mouseY>a) if(mouseY<b){
+      stroke(a);
+      
+  }
+}
+  // when "c" is pressed clear the screen
+void keyPressed(){
+  if(key == 'c' || key == 'c') {
+     background(a);
+    }
+ 
+}
